@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import './pages/index_page.dart';
+import 'package:okrm_app/pages/index_page.dart';
 
 void main() => runApp(OkrmApp());
 
@@ -10,11 +10,14 @@ class OkrmApp extends StatelessWidget {
     return Container(
       child: MaterialApp(
         title: "生而不庸",
+        initialRoute: "/",
         debugShowCheckedModeBanner: true,
         theme: ThemeData(
           primaryColor: Colors.orange
         ),
-        home: IndexPage(),
+        routes: {
+          "/": (context) => IndexPage()
+        },
       ),
     );
   }

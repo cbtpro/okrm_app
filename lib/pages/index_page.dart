@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'home_page.dart';
+import 'square_page.dart';
 import 'profile_page.dart';
 import 'settings_page.dart';
 
@@ -15,17 +15,17 @@ class _IndexPageState extends State<IndexPage> {
       icon: Icon(CupertinoIcons.home),
       title: Text("广场")
     ),BottomNavigationBarItem(
-      icon: Icon(CupertinoIcons.person),
-      title: Text("我的")
+      icon: Icon(CupertinoIcons.info),
+      title: Text("事件")
     ),
     BottomNavigationBarItem(
-      icon: Icon(CupertinoIcons.settings),
-      title: Text("设置")
+      icon: Icon(CupertinoIcons.person),
+      title: Text("我的")
     )
   ];
 
   final List pages = [
-    HomePage(),
+    SquarePage(),
     ProfilePage(),
     SettingsPage()
   ];
