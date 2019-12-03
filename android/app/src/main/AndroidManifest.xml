@@ -10,6 +10,9 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="okrm_app"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="a82c0214d96e0ae17ffe553051c0af29" />
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
