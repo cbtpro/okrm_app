@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:okrm_app/pages/index_page.dart';
+import 'package:amap_map_fluttify/amap_map_fluttify.dart';
 
-void main() => runApp(OkrmApp());
+Future<void> main() async {
+  // ios端初始化高德地图key
+  await AmapCore.init('5d570ce95aa24feab2cd9f000af2b6f6');
+
+  runApp(OkrmApp());
+}
+
+
 
 class OkrmApp extends StatelessWidget {
   @override
@@ -11,7 +19,7 @@ class OkrmApp extends StatelessWidget {
       child: MaterialApp(
         title: "生而不庸",
         initialRoute: "/",
-        debugShowCheckedModeBanner: true,
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: Colors.orange
         ),

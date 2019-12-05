@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import './square_page.dart';
+import './events_page.dart';
 import './profile_page.dart';
-import './settings_page.dart';
 
 class Tabs extends StatefulWidget {
   Tabs({Key key}) : super(key: key);
@@ -26,8 +26,8 @@ class _TabsState extends State<Tabs> {
 
   List<Widget> _pages = [
     SquarePage(),
-    ProfilePage(),
-    SettingsPage()
+    EventPage(),
+    ProfilePage()
   ];
 
   final List<BottomNavigationBarItem> bottomNavigationBarItems = [
@@ -49,6 +49,9 @@ class _TabsState extends State<Tabs> {
       body: PageView(
         controller: this._pageController,
         children: this._pages,
+        onPageChanged: (context) {
+          print(context);
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         fixedColor: Colors.orange,

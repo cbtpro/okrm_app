@@ -5,7 +5,7 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("我的"),
+          title: Text("设置"),
         ),
         body: ListView(
           children: <Widget>[
@@ -116,7 +116,7 @@ class SettingsPage extends StatelessWidget {
       child: Center(
         child: FlatButton(
           onPressed: () {},
-          color: Colors.black12,
+          color: Colors.redAccent,
           child: Text("退出登录"),
         )
       ),
