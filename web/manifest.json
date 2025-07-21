@@ -1,6 +1,6 @@
 {
-    "name": "okrm_app_v1",
-    "short_name": "okrm_app_v1",
+    "name": "okrm_app",
+    "short_name": "okrm_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

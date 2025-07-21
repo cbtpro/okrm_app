@@ -1,18 +1,22 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
-  @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Scaffold(),
+    return CupertinoPageScaffold(
+      // navigationBar: const CupertinoNavigationBar(
+      //   middle: Text('登录'),
+      // ),
+      child: Center(
+        child: CupertinoButton.filled(
+          onPressed: () {
+            // 你的点击逻辑
+          },
+          child: const Text('按钮'),
+        ),
+      ),
     );
   }
 }

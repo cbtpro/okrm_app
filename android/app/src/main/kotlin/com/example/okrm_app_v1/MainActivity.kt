@@ -1,4 +1,4 @@
-package com.example.okrm_app_v1
+package com.chenbitao.okrm_app
 
 import io.flutter.embedding.android.FlutterActivity
 

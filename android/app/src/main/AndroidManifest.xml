@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="okrm_app_v1"
+        android:label="okrm_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -30,7 +30,29 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <!-- 高德 Key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a82c0214d96e0ae17ffe553051c0af29" />
     </application>
+
+    <!-- 权限 -->
+    <!--允许获取粗略位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/> -->
+    <!--允许访问网络-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--允许获取wifi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--允许获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--允许获取wifi状态改变，用于网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
+    <!--允许写设备缓存，用于问题排查-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
          https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.

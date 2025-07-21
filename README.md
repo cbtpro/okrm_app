@@ -1,4 +1,4 @@
-# okrm_app_v1
+# okrm_app
 
 A new Flutter project.
 
@@ -25,19 +25,23 @@ flutter中文社区 https://book.flutterchina.club/
 
 flutter 开源项目 https://github.com/flutterchina
 
+[在 Flutter 里使用 Packages](https://docs.flutter.cn/packages-and-plugins/using-packages)
+
 ## 环境配置
+
+window 打开开发者模式
+start ms-settings:developers
 
 ## 安装教程
 
 1. VS Code
 2. VS Code插件Dart-Code.flutter
-3. [国内网络配置
-](https://docs.flutter.cn/community/china)
+3. [国内网络配置](https://docs.flutter.cn/community/china)
 
 ## 使用说明
 
-  - 2019/12/05 增加高德地图支持 https://pub-web.flutter-io.cn/packages/amap_map_fluttify
-  - 安卓模拟器使用的是x86架构，导致安卓只能用真机调试。
+  - 2019/12/05 增加[高德地图](https://pub.dev/packages/amap_flutter_map)支持
+    pub add amap_flutter_map
   - IOS模拟器无法获取真实地址，所以模拟器无法使用获取当前位置
   - TODO
 

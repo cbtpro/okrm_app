@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class EventsPage extends StatelessWidget {
-  const EventsPage({super.key});
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       // navigationBar: const CupertinoNavigationBar(
-      //   middle: Text('事件'),
+      //   middle: Text('注册'),
       // ),
       child: Center(
         child: CupertinoButton.filled(

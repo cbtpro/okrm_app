@@ -1,27 +1,36 @@
-import 'package:flutter/material.dart';
-import '../widgets/amap/amap.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:okrm_app/widgets/map_view.dart';
 
-class SquarePage extends StatefulWidget {
-  SquarePage({Key key}) : super(key: key);
-
-  @override
-  _SquarePageState createState() => _SquarePageState();
-}
-
-class _SquarePageState extends State<SquarePage>
-    with AutomaticKeepAliveClientMixin {
-
-  @override
-  bool get wantKeepAlive => true;
+class SquarePage extends StatelessWidget {
+  const SquarePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("广场"),
+    return CupertinoPageScaffold(
+      // navigationBar: CupertinoNavigationBar(
+      //   middle: const Text('广场'),
+      // ),
+      child: SafeArea(
+        child: Stack(
+          children: [
+            // 地图铺满整个 SafeArea 区域
+            Positioned.fill(
+              child: MapView(
+                mapType: MapType.amap, // 可切换为 MapType.amap / baidu 等
+              ),
+            ),
+            // 按钮悬浮在左下角，带 padding
+            Positioned(
+              left: 8,
+              bottom: 8,
+              child: CupertinoButton.filled(
+                child: const Text('按钮'),
+                onPressed: () {},
+              ),
+            ),
+          ],
+        ),
       ),
-      body: Padding(padding: EdgeInsets.all(0), child: AmapWidget()),
     );
   }
 }

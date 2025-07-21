@@ -1,13 +1,10 @@
+// 在页面A跳转页面B
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'tabs.dart';
+// import '../routes/navigator_util.dart';
 
-class IndexPage extends StatefulWidget {
-  @override
-  _IndexPageState createState() => _IndexPageState();
-}
-
-class _IndexPageState extends State<IndexPage> {
+class IndexPage extends StatelessWidget {
+  const IndexPage({super.key});
 
   @override
   Widget build(BuildContext context) {
