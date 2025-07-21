@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:latlng/latlng.dart';
 import 'package:map/map.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'base_map_view.dart';
 
 class AmapMapView extends BaseMapView {
@@ -26,11 +27,11 @@ class AmapMapView extends BaseMapView {
 
             // 1 到 4 之间的随机数，用于高德服务器负载均衡
             final serverNum = 1 + (x + y) % 4;
-
+            final apiKey = dotenv.env['AMAP_KEY'];
             final url =
                 'https://wprd0$serverNum.is.autonavi.com/appmaptile'
                 '?x=$x&y=$y&z=$z'
-                '&lang=zh_cn&size=1&scl=1&style=7&key=你的密钥';
+                '&lang=zh_cn&size=1&scl=1&style=7&key=$apiKey';
 
             return CachedNetworkImage(
               imageUrl: url,
