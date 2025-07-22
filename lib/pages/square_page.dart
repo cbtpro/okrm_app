@@ -16,7 +16,11 @@ class SquarePage extends StatelessWidget {
             // 地图铺满整个 SafeArea 区域
             Positioned.fill(
               child: MapView(
-                mapType: MapType.amap, // 可切换为 MapType.amap / baidu 等
+                // 可切换为 MapType.amap / baidu 等
+                mapType: MapType.amap,
+                onMapDrag: (a) => {
+                  print(a)
+                },
               ),
             ),
             // 按钮悬浮在左下角，带 padding

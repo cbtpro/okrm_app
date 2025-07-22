@@ -75,3 +75,10 @@ zipStorePath=wrapper/dists
 distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.12-all.zip
 
 ```
+
+```
+flutter clean
+./android/gradlew --refresh-dependencies
+flutter pub get
+flutter run
+```

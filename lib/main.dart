@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import './pages/index_page.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_map_tile_caching/flutter_map_tile_caching.dart';
 
 void main() async {
   await dotenv.load(fileName: ".env");
+  WidgetsFlutterBinding.ensureInitialized();
+  await FMTCObjectBoxBackend().initialise();
+  // 初始化命名缓存数据库
+  await FMTCStore('mapStore').manage.create();
   runApp(const MyApp());
 }
 

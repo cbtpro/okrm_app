@@ -1,8 +1,9 @@
 allprojects {
     repositories {
         // 1 阿里云仓库
-        maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
+        // maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
         maven { url = uri("https://maven.aliyun.com/repository/public") }
+        maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
         google()
         mavenCentral()
         // 2 gradle插件，要放到最后一行

@@ -1,13 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:latlng/latlng.dart' as latlng;
-import 'package:latlong2/latlong.dart'; // 输出统一的 LatLng 类型
+import 'package:latlong2/latlong.dart'; // 统一输出 LatLng 类型
 import 'package:map/map.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'base_map_view.dart';
 
-class GoogleMapView extends BaseMapView {
-  const GoogleMapView({super.key, super.onDrag});
+class TencentMapView extends BaseMapView {
+  const TencentMapView({super.key, super.onDrag});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,8 @@ class GoogleMapView extends BaseMapView {
               y = (y % tilesInZoom + tilesInZoom) % tilesInZoom;
 
               final url =
-                  'https://mt.google.com/vt/lyrs=m&x=$x&y=$y&z=$z';
+                  'https://rt${(x + y) % 4}.map.gtimg.com/tile'
+                  '?z=$z&x=$x&y=$y&type=vector&styleid=2';
 
               return CachedNetworkImage(
                 imageUrl: url,
