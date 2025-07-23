@@ -1,14 +1,17 @@
 import 'package:flutter/cupertino.dart';
-import './pages/index_page.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_map_tile_caching/flutter_map_tile_caching.dart';
+import 'package:okrm_app/pages/index_page.dart';
 
 void main() async {
-  await dotenv.load(fileName: ".env");
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
+  // 初始化缓存后端
   await FMTCObjectBoxBackend().initialise();
-  // 初始化命名缓存数据库
+  
+  // 创建你要使用的缓存（可选）
   await FMTCStore('mapStore').manage.create();
+
   runApp(const MyApp());
 }
 
