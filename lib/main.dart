@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
-      title: 'Flutter Demo',
+      title: "生而不庸",
       theme: const CupertinoThemeData(
         // This is the theme of your application.
         //
