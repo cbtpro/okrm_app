@@ -9,5 +9,21 @@ abstract class BaseMapView extends StatelessWidget {
 
   final MapController? mapController;
 
-  const BaseMapView({super.key, this.onDrag, this.mapController});
+  final List<Marker> markers;
+
+  final List<Polygon<Object>> polygons;
+
+  final List<Polyline> polylines;
+
+  final List<CircleMarker> circles;
+
+  const BaseMapView({
+    super.key,
+    this.onDrag,
+    this.mapController,
+    this.markers = const [],
+    this.polygons = const [],
+    this.polylines = const [],
+    this.circles = const [],
+  });
 }

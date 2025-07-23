@@ -8,7 +8,15 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'base_map_view.dart';
 
 class GoogleMapView extends BaseMapView {
-  const GoogleMapView({super.key, super.onDrag, super.mapController });
+  const GoogleMapView({
+    super.key,
+    super.onDrag,
+    super.mapController,
+    super.markers,
+    super.polygons,
+    super.polylines,
+    super.circles,
+  });
 
   @override
   Widget build(BuildContext context) {

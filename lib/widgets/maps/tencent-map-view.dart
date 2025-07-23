@@ -8,7 +8,15 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'base_map_view.dart';
 
 class TencentMapView extends BaseMapView {
-  const TencentMapView({super.key, super.onDrag, super.mapController });
+  const TencentMapView({
+    super.key,
+    super.onDrag,
+    super.mapController,
+    super.markers,
+    super.polygons,
+    super.polylines,
+    super.circles,
+  });
 
   @override
   Widget build(BuildContext context) {

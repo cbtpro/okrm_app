@@ -8,7 +8,15 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'base_map_view.dart';
 
 class AmapMapView extends BaseMapView {
-  const AmapMapView({super.key, super.onDrag, super.mapController });
+  const AmapMapView({
+    super.key,
+    super.onDrag,
+    super.mapController,
+    super.markers,
+    super.polygons,
+    super.polylines,
+    super.circles,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +27,7 @@ class AmapMapView extends BaseMapView {
       loadingStrategy: BrowseLoadingStrategy.onlineFirst,
       errorHandler: (e) {
         debugPrint("Error: $e");
+        // 如果报错了，创建一个长度为 256 的无内容字节数组
         return Uint8List(256);
       },
     );
@@ -49,16 +58,10 @@ class AmapMapView extends BaseMapView {
           tileProvider: tileProvider,
           userAgentPackageName: 'com.example.app',
         ),
-        MarkerLayer(
-          markers: [
-            Marker(
-              width: 40.0,
-              height: 40.0,
-              point: beijingCenter,
-              child: Icon(Icons.location_on, color: Colors.red, size: 40.0),
-            ),
-          ],
-        ),
+        MarkerLayer(markers: markers),
+        PolygonLayer(polygons: polygons),
+        PolylineLayer(polylines: polylines),
+        CircleLayer(circles: circles),
       ],
     );
   }
