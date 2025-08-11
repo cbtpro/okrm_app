@@ -75,6 +75,8 @@ zipStorePath=wrapper/dists
 distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.12-all.zip
 
 ```
+补充.env文件，配置高德地图 ak
+cp .env.example .env
 
 ```
 flutter clean
