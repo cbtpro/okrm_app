@@ -83,4 +83,6 @@ flutter clean
 ./android/gradlew --refresh-dependencies
 flutter pub get
 flutter run
+# 调试多种设备，但编译更慢
+flutter run -d all
 ```
